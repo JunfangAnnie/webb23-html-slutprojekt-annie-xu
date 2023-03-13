@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Slutprojekt, Annie Xu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f3acbd9be6.js" crossorigin="anonymous"></script>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="Image/icon.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <!--Navbar med hjälp av Bootstrap: horisontell när vyn är stor och vertikal (hamburgarmeny) när vyn är mindre-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <picture>
+      <source media="(prefers-color-scheme:dark)" srcset="Image/logo_dark.png">
+      <img src="Image/logo_light.PNG" alt="Logo" width="150">
+    </picture>        
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Hem</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="info.html">Information</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mina projekt</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="projekt1.html">Profil</a>
+              <a class="dropdown-item active" href="projekt2.html">Lokal restaurang</a>
+              <a class="dropdown-item" href="projekt3.html">MovieLovers</a>
+              <a class="dropdown-item" href="projekt4.html">MapleStory</a>
+            </div>        
+        </ul>
+      </div>
+    </nav>
+  
+    <header>
+      <h1>Miniprojekt 2: Lokal restaurang</h1>
+    </header>
+    <!--Innehåll som är indelat i två: gallery & small-img-wrapper-->
+    <main class="main">
+      <div class="gallery">
+        <figure class="main-image">
+            <img src="Image/minip2.PNG" alt="Main image">
+        </figure>
+        <!--Bilderna kommer att ligga till vänster-->
+        <div class="small-img-wrapper">
+          <figure class="small-img">
+            <img src="Image/minip2_1.PNG" alt="Liten bild 1">
+          </figure>
+          <figure class="small-img">
+            <img src="Image/minip2_2.PNG" alt="Liten bild 2">
+          </figure>
+          <figure class="small-img">
+            <img src="Image/minip2_3.PNG" alt="Liten bild 3">
+          </figure>
+        </div>
+      </div>
+      <!--Texten till höger-->
+      <article class="text">
+        <h2>He Cheng</h2>
+        <p>In in nisl nec purus hendrerit auctor nec nec libero. Sed fringilla vel dolor nec vehicula. Aliquam erat volutpat. Pellentesque maximus sollicitudin sapien quis consectetur. In eu convallis ligula. Morbi ex lacus, ultrices sit amet tincidunt a, volutpat sit amet ante. Phasellus commodo rutrum gravida. Suspendisse vel neque convallis, placerat urna non, gravida nunc. In semper, justo a cursus tincidunt, libero risus tincidunt lectus, ac congue nulla sem sit amet neque. Nunc malesuada massa ligula, sit amet tempor diam bibendum vel.</p>
+      </article>
+    </main>
+    <!--Footer med Bootstraps layout "grid"-->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Om mig</h3>
+            <p>En blivande webbutvecklare med inriktning e-handel</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Kontakt</h3>
+            <ul>
+              <li>Telefonnummer: <a href="tel:0739425626">073-942 56 26</a></li>
+              <li>Email: <a href="mailto:annie.xu@gritacademy.se">annie.xu@gritacademy.se</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3>Följ mig!</h3>
+            <ul class="socialm-icons">
+                <li><a href="https://www.facebook.com/" target="_blank" class="fab fa-facebook"></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" class="fab fa-instagram"></a></li>
+                <li><a href="https://discord.com/" target="_blank" class="fab fa-discord"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

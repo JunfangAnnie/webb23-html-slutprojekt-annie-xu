@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Slutprojekt, Annie Xu</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.2.1/dist/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f3acbd9be6.js" crossorigin="anonymous"></script>
+    <link href="CSS/style.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="Image/icon.png" type="image/x-icon">
+  </head>
+
+  <body>
+    <!--Navbar med hjälp av Bootstrap: horisontell när vyn är stor och vertikal (hamburgarmeny) när vyn är mindre-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <picture>
+      <source media="(prefers-color-scheme:dark)" srcset="Image/logo_dark.png">
+      <img src="Image/logo_light.PNG" alt="Logo" width="150">
+    </picture>        
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Hem</a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="info.html">Information</a>
+          </li>        
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mina projekt</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="projekt1.html">Profil</a>
+              <a class="dropdown-item" href="projekt2.html">Lokal restaurang</a>
+              <a class="dropdown-item" href="projekt3.html">MovieLovers</a>
+              <a class="dropdown-item" href="projekt4.html">MapleStory</a>
+            </div>
+        </ul>
+      </div>
+    </nav>
+    <!--Header-->
+    <header>
+      <h1>Om mig</h1>
+    </header>
+    <!--Innehåll-->
+    <main>
+      <div class="flex-container">
+        <figure class="flex-item">
+          <!--Beroende på skärmstorlek ändras bild-->
+          <picture>
+            <source media="(max-width:650px)" srcset="Image/asiansyo_3.jpg">
+            <source media="(max-width:960px)" srcset="Image/asiansyo_2.jpg">
+            <img id="info-img" src="Image/asiansyo.jpg" alt="Helbild">
+          </picture>
+        </figure>
+        <article class="flex-item">
+          <h2>Annie Xu</h2>
+          <p><small>En blivande webbutvecklare med inriktning e-handel</small></p>
+          <p>Jag är 24 år och bosatt i Malmö (under mamma och pappas tak). Under hela min barndom har jag älskat att pyssla, vilket är det som lett mig till vad jag älskar att göra idag; att skapa. Älskandet att skapa har fått mig att vilja bli en webbutvecklare och därför är jag nu en student på Grit Academy i Malmö som läser just programmet "Webbutveckling inriktning e-handel".</p>
+          <p>Utöver studerandet och drömmen mot att bli en duktig webbutvecklare, är jag en kattälskare. Idag har jag tre egna katter, men hjälper mer än gärna hemlösa katter också.</p>
+        </article>
+      </div>
+    </main>
+
+    <!--Footer med Bootstraps layout "grid"-->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3>Om mig</h3>
+            <p>En blivande webbutvecklare med inriktning e-handel</p>
+          </div>
+          <div class="col-md-4">
+            <h3>Kontakt</h3>
+            <ul>
+              <li>Telefonnummer: <a href="tel:0739425626">073-942 56 26</a></li>
+              <li>Email: <a href="mailto:annie.xu@gritacademy.se">annie.xu@gritacademy.se</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h3>Följ mig!</h3>
+            <ul class="socialm-icons">
+              <li><a href="https://www.facebook.com/junfangannie/" target="_blank" class="fab fa-facebook"></a></li>
+              <li><a href="https://www.instagram.com/junfangannie/" target="_blank" class="fab fa-instagram"></a></li>
+              <li><a href="https://discordapp.com/users/284077087621644288" target="_blank" class="fab fa-discord"></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

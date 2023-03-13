@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:wght@600&family=Della+Respira&family=Fredoka+One&display=swap');
+:root {
+    --main-color: #99c2c2;
+    --link-color: #364b4b;
+    --gap: 1%;
+    --padding-margin: 20px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Navbar*/
+nav {
+    background-color: var(--main-color);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+}
+
+.dropdown-item.active{
+    background-color:var(--link-color); /*Bakgrundsfärg till dropdown-menyn när en länk är aktiv*/
+}
+
+/*Header*/
+header {
+    background: radial-gradient(circle, #99c2c2 10%, transparent 11%); /*Bakgrunden får prickar*/
+    background-size: 4em 4em;
+    background-color: #A4CFCF;
+    height: 180px; /*Headers höjd*/
+    text-align: center;
+    border-bottom: 1px solid var(--link-color); /*Tunn border på undersidan av header*/
+    margin-top: 70px; /*Margin så att fixed navbar inte överlappar header*/
+}
+
+header h1 {
+    padding-top: 4rem;
+    font-family: 'Fredoka One', cursive;
+}
+
+/*Projekten i startsidan*/
+.projects {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.item {
+    margin: var(--gap);
+    min-width:400px;
+    min-height: 400px;
+}
+
+.item h2 {
+    font-size: 1.5rem;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+/*Stylar mina projektbilder i startsidan med ytterst lite rundad kant och en tunn border*/
+.project_img {
+    border-radius: var(--gap);
+    box-shadow: 1px 1px 5px 0px var(--link-color);
+    overflow: hidden;
+    filter: grayscale(.8); /*Bilderna blir gråskaliga*/
+}
+
+/*När muspekaren är över bilderna övergår det grå filtret sakta till bildernas normala färg*/
+.project_img:hover{
+    animation: picture-fade ease-in-out .8s forwards;
+}
+
+/*När muspekaren är över bilderna blir de större, i detta fall ger det en zoom effekt*/
+.projects img:hover {
+    animation-name: image-scale;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+/*Informationssida*/
+.flex-container {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center;
+    margin-top: var(--gap);
+}
+
+.flex-item {
+    margin: var(--gap);
+    width: 50vh;
+}
+
+.flex-item h2 {
+    font-family: 'Della Respira', serif;
+    font-size: 3rem;
+}
+
+#info-img {
+    width: 400px;
+    overflow: hidden;
+    border-radius: var(--gap);
+}
+
+/*Projektssidor*/
+.main {
+    display: flex;
+    padding: var(--padding-margin);
+    font-family: 'Della Respira', serif;
+}
+  
+.gallery {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+  
+.main-image img {
+    width: 99%;
+    border-radius: var(--gap);
+    box-shadow: 1px 1px 5px 0px var(--link-color);
+}
+
+.small-img-wrapper {
+    display: flex;
+}
+  
+.small-img img {
+    width: 97%;
+    border-radius: var(--gap);
+    box-shadow: 1px 1px 5px 0px var(--link-color); /*Bilderna får en skugga*/
+}
+
+.text {
+    padding: var(--padding-margin);
+    width: 40%;
+    animation-name: slidein; /*Texten slide in från höger sida*/
+    animation-duration: 1s;
+}
+
+/*Footer*/
+footer {
+    background-color: var(--main-color);
+    padding: var(--gap);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: auto;
+}
+
+.container {
+    max-width: 90%;
+}
+
+.col-md-4 {
+    text-align: center;
+}
+
+h3 {
+    margin-bottom: var(--padding-margin);
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.socialm-icons li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.socialm-icons li a {
+    color: var(--link-color);
+    font-size: 30px;
+    transition: color 0.3s ease-in-out; /*Sakta övergång*/
+}
+
+a:link {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+.socialm-icons a:hover {
+    color: #3b5998; /*Ikonerna blir blå när musen är över*/
+}
+
+@keyframes picture-fade {
+	0% {
+		filter: grayscale(.7);
+    }
+	40% {
+		filter: grayscale(.5);
+	}
+	100% {
+		filter: grayscale(0);
+	}
+}
+
+@keyframes image-scale {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.4);
+    }
+}
+
+@keyframes slidein {
+    from { transform: translateX(100%); 
+    }
+    to { transform: translateX(0); 
+    }
+}
+
+  
+@media (prefers-color-scheme:dark){
+    nav, footer {
+        background-color: #121212;
+    }
+
+    h1, .item h2, details, article{
+        filter:invert(1)
+    }
+    
+    body {
+        background-color: #2B2B2B;
+    }
+
+    header {
+        background: radial-gradient(circle, #364b4b 10%, transparent 11%); /*Prickarna får en mörkare färg*/
+        background-size: 4em 4em;
+        background-color: #191919;
+    }
+
+    img {
+        filter: brightness(50%); /*Alla bilder blir mörkare i dark mode*/
+    }
+
+    button, .navbar-nav {
+        filter: invert(1);
+    }
+
+    .socialm-icons a:hover {
+        color: white;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /*Projektsidornas innehåll blir vertikal i mobilvy*/
+    .main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery {
+        width: 100%; /*Bilderna täcker hela bredden*/
+    }
+
+    .text {
+        width: 100%; /*Texten täcker hel bredd och centreras*/
+        text-align: center; 
+    } 
+}
