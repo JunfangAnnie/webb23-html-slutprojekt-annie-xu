@@ -2,6 +2,7 @@
 :root {
     --main-color: #99c2c2;
     --link-color: #364b4b;
+    --darkmode-bg: #191919;
     --gap: 1%;
     --padding-margin: 20px;
 }
@@ -16,6 +17,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #e4eded;
 }
 
 /*NAVBAR*/
@@ -55,21 +57,27 @@ header h1 {
 }
 
 .item {
+    background-color: white;
     margin: var(--gap);
     min-width:400px;
-    min-height: 400px;
+    min-height: 330px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 }
 
+
 .item h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-family: 'Bebas Neue', cursive;
+    text-align: center;
+}
+
+details {
     text-align: center;
 }
 
 /*Stylar mina projektbilder i startsidan med ytterst lite rundad kant och en tunn border*/
 .project_img {
-    border-radius: var(--gap);
-    box-shadow: 1px 1px 5px 0px var(--link-color);
+    box-shadow: var(--link-color) 0px 10px 10px -10px;
     overflow: hidden;
     filter: grayscale(.8); /*Bilderna blir gråskaliga*/
 }
@@ -229,7 +237,7 @@ a:link {
         background-color: #121212;
     }
 
-    h1, .item h2, details, article{
+    h1, .item > h2, details, article, button, .navbar-nav {
         filter:invert(1)
     }
     
@@ -240,15 +248,16 @@ a:link {
     header {
         background: radial-gradient(circle, #364b4b 10%, transparent 11%); /*Prickarna får en mörkare färg*/
         background-size: 4em 4em;
-        background-color: #191919;
+        background-color: var(--darkmode-bg);
+    }
+
+    .item {
+        background-color: var(--darkmode-bg);
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
     }
 
     img {
         filter: brightness(50%); /*Alla bilder blir mörkare i dark mode*/
-    }
-
-    button, .navbar-nav {
-        filter: invert(1);
     }
 
     .socialm-icons a:hover {
@@ -267,6 +276,10 @@ a:link {
       display: flex;
       flex-direction: column;
       overflow: auto;
+    }
+
+    .projects {
+        margin-bottom: var(--padding-margin);
     }
 
     .gallery {
