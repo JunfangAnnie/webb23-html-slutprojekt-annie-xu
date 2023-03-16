@@ -18,7 +18,7 @@ body {
     flex-direction: column;
 }
 
-/*Navbar*/
+/*NAVBAR*/
 nav {
     background-color: var(--main-color);
     font-family: 'Cormorant Garamond', serif;
@@ -29,7 +29,7 @@ nav {
     background-color:var(--link-color); /*Bakgrundsfärg till dropdown-menyn när en länk är aktiv*/
 }
 
-/*Header*/
+/*HEADER*/
 header {
     background: radial-gradient(circle, #99c2c2 10%, transparent 11%); /*Bakgrunden får prickar*/
     background-size: 4em 4em;
@@ -45,7 +45,7 @@ header h1 {
     font-family: 'Fredoka One', cursive;
 }
 
-/*Projekten i startsidan*/
+/*PROJEKTEN I STARTSIDAN*/
 .projects {
     display: flex; 
     flex-direction: row;
@@ -86,7 +86,7 @@ header h1 {
     animation-fill-mode: forwards;
 }
 
-/*Informationssida*/
+/*INFORMATIONSSIDA*/
 .flex-container {
     display: flex; 
     flex-direction: row;
@@ -111,7 +111,7 @@ header h1 {
     border-radius: var(--gap);
 }
 
-/*Projektssidor*/
+/*PROJEKTSIDOR*/
 .main {
     display: flex;
     padding: var(--padding-margin);
@@ -126,8 +126,8 @@ header h1 {
   
 .main-image img {
     width: 99%;
-    border-radius: var(--gap);
-    box-shadow: 1px 1px 5px 0px var(--link-color);
+    border-radius: var(--gap); /*Lite rundade kanter*/
+    box-shadow: 1px 1px 5px 0px var(--link-color); /*Bilderna får en skugga*/
 }
 
 .small-img-wrapper {
@@ -147,7 +147,7 @@ header h1 {
     animation-duration: 1s;
 }
 
-/*Footer*/
+/*FOOTER*/
 footer {
     background-color: var(--main-color);
     padding: var(--gap);
@@ -194,6 +194,7 @@ a:link {
     color: #3b5998; /*Ikonerna blir blå när musen är över*/
 }
 
+/*KEYFRAMES FÖR ANIMATIONER*/
 @keyframes picture-fade {
 	0% {
 		filter: grayscale(.7);
@@ -222,7 +223,7 @@ a:link {
     }
 }
 
-  
+/*DARKMODE*/
 @media (prefers-color-scheme:dark){
     nav, footer {
         background-color: #121212;
@@ -253,13 +254,19 @@ a:link {
     .socialm-icons a:hover {
         color: white;
     }
+
+    .container {
+        color:#698080;
+    }
 }
 
+/*MOBILVY*/
 @media screen and (max-width: 768px) {
     /*Projektsidornas innehåll blir vertikal i mobilvy*/
     .main {
       display: flex;
       flex-direction: column;
+      overflow: auto;
     }
 
     .gallery {
