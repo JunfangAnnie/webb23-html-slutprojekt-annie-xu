@@ -276,6 +276,10 @@ a:link {
       overflow: auto;
     }
 
+    .flex-container {
+      flex-direction: column;
+    }
+
     .projects {
         margin-bottom: var(--padding-margin);
     }
