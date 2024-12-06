@@ -98,14 +98,13 @@ details {
 .flex-container {
     display: flex; 
     flex-direction: row;
-    flex-wrap: wrap; 
     justify-content: center;
     margin-top: var(--gap);
 }
 
 .flex-item {
     margin: var(--gap);
-    width: 50vh;
+    width: 50%;
 }
 
 .flex-item h2 {
